@@ -1,0 +1,13 @@
+<div class="card mb-2">
+  <div [ngClass]="{'border rounded border-success':task?.reminder,'card-body':true}"
+       (dblclick)="onToggle(task)">
+    <h5 class="card-title">{{task?.text}}
+      <fa-icon [ngClass]="'text-danger d-inline-block'"
+               [ngStyle]="{'float':'right'}"
+               [icon]="faTimes"
+               (click)="onDelete(task)"></fa-icon>
+    </h5>
+    <p class="card-text">{{ task?.day }}</p>
+    <!-- <a href="#" class="btn btn-primary">Go somewhere</a> -->
+  </div>
+</div>

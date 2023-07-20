@@ -1,0 +1,10 @@
+<div class="row">
+  <div class="col-sm-12 p-3 border border-primary rounded d-flex justify-content-between">
+    <h1>{{ title }}</h1>
+    <div>
+      <app-button *ngIf="hasRoute('/')" color="{{ showAddTask ? 'red' : 'green' }}"
+                  text="{{ showAddTask ? 'Close' : 'Add' }}"
+                  (btnClick)="toggleAddTask()"></app-button>
+    </div>
+  </div>
+</div>

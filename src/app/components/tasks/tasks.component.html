@@ -1,0 +1,13 @@
+
+<div class="row mt-2">
+  <div class="col-sm-12 p-3">
+    <app-add-task (onAddTask)="addTask($event)"></app-add-task>
+  </div>
+  <div class="col-sm-12">
+      <app-task-item *ngFor="let task of tasks" 
+                      [task]="task"
+                      (onDeleteTask)="deleteTask(task)" 
+                      (onToggleReminder)="toggleReminder(task)" 
+      ></app-task-item>
+  </div>
+</div>

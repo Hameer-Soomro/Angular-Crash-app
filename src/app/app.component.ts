@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-crash';
+  description = 'welcome to my first angular application';
 }
